@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #172033;
+  min-height: 100vh;
+}
+button, textarea { font: inherit; }
+button { cursor: pointer; border: 0; }
+.app { width: min(900px, 92%); margin: 0 auto; padding: 48px 0; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.eyebrow { color: #4f46e5; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.4rem); }
+.subtitle { color: #64748b; margin-top: 10px; }
+.stats { display: flex; justify-content: space-between; margin: 30px 0 16px; color: #64748b; font-weight: 700; }
+.card-area { text-align: center; }
+.flashcard {
+  min-height: 360px; background: white; border-radius: 24px; padding: 50px 30px;
+  box-shadow: 0 20px 50px rgba(15,23,42,.10);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.card-label { color: #4f46e5; font-size: .85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; }
+.card-text { max-width: 720px; font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; line-height: 1.4; margin: 28px 0; }
+.navigation, .actions { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+.primary, .secondary, .outline, .danger {
+  padding: 12px 20px; border-radius: 12px; font-weight: 700; transition: transform .15s, opacity .15s;
+}
+button:hover { transform: translateY(-1px); opacity: .9; }
+.primary { background: #4f46e5; color: white; }
+.secondary { background: #e2e8f0; color: #172033; }
+.outline { background: white; color: #4f46e5; border: 1px solid #c7d2fe; }
+.danger { background: #fee2e2; color: #b91c1c; }
+.modal {
+  position: fixed; inset: 0; background: rgba(15,23,42,.55); display: grid; place-items: center; padding: 20px;
+}
+.hidden { display: none; }
+.modal-box { position: relative; width: min(550px, 100%); background: white; padding: 32px; border-radius: 20px; }
+.close { position: absolute; right: 18px; top: 14px; background: transparent; font-size: 28px; }
+form { display: grid; gap: 10px; margin-top: 22px; }
+label { font-weight: 700; }
+textarea { min-height: 110px; resize: vertical; padding: 12px; border: 1px solid #cbd5e1; border-radius: 10px; }
+@media (max-width: 650px) { header { flex-direction: column; align-items: flex-start; } header .primary { width: 100%; } }
